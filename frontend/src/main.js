@@ -1,6 +1,6 @@
 import "./styles/base.css";
 import { getSettings, getPages } from "./api";
-import { hero } from "./blocks/hero/hero";
+import { renderBlocks } from "./render";
 
 async function start() {
   // const settings = await getSettings();
@@ -11,8 +11,8 @@ async function start() {
     ]);
 
     document.title = `${page.title} - ${settings.siteName}`;
-    const heroBlock = page.blocks.find((block) => block.type === "hero");
-    app.innerHTML = hero(heroBlock);
+
+    app.innerHTML = `<main>${renderBlocks(page.blocks)}</main>`;
   } catch (error) {
     app.textContent = `Something went wrong: ${error.message}`;
   }
