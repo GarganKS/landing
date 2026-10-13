@@ -15,6 +15,11 @@ export const Common: GlobalConfig = {
         { name: 'link', type: 'text', label: 'Посилання пункту меню', required: true },
       ],
     },
-    { name: 'footer', type: 'group', label: 'Футтер', fields: [{}] },
+    {
+      name: 'footer',
+      type: 'group',
+      label: 'Футтер',
+      fields: [{ name: 'text', type: 'text', label: 'text' }],
+    },
   ],
 }
