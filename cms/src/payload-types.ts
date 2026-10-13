@@ -194,7 +194,7 @@ export interface Page {
               | null;
             id?: string | null;
             blockName?: string | null;
-            blockType: 'Hero';
+            blockType: 'hero';
           }
         | {
             anchor?: string | null;
@@ -345,7 +345,7 @@ export interface PagesSelect<T extends boolean = true> {
   blocks?:
     | T
     | {
-        Hero?:
+        hero?:
           | T
           | {
               anchor?: T;
